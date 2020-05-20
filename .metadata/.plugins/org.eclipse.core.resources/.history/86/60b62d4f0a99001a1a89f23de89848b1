@@ -1,0 +1,5 @@
+package com.onDemand.carWash.userService.exception;
+
+public class ResourceNotFoundException {
+
+}

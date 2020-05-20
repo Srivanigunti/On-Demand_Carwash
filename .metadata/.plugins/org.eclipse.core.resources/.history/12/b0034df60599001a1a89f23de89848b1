@@ -1,0 +1,91 @@
+package com.onDemand.carWash.userService.entity;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.mongodb.lang.NonNull;
+
+@Document(collection = "userInformation")
+public class User {
+
+	@Id
+	private String userId;
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String mobileNumber;
+	
+	private String emailId;
+	
+	private String password;
+	
+	public User() {
+		super();
+	}
+
+	public User(String userId, String firstName, String lastName, String mobileNumber, String email, String password
+			) {
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobileNumber = mobileNumber;
+		this.emailId = emailId;
+		this.password = password;
+	}
+
+	public String getuserId() {
+		return userId;
+	}
+
+	public void setuserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", mobileNumber="
+				+ mobileNumber + ", emailId=" + emailId + ", password=" + password +  "]";
+	}
+
+}

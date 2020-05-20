@@ -1,0 +1,5 @@
+package com.onDemand.carWash.entity;
+
+public @interface Document {
+
+}
